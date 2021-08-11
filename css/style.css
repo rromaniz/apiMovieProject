@@ -8,8 +8,29 @@
 }
 .wrapper {
   background: #171c24;
-  position: fixed;
+  position: static;
   width: 100%;
+}
+.principal{
+  margin-top: 3%;
+}
+body{
+  background-color: #1A212C;
+}
+
+.body-card>.title{
+  font-weight: 600;
+}
+.body-card>.vote{
+  font-weight: 500;
+  font-size: 0.8em;
+}
+.body-card{
+  line-height: 40%;
+}
+.principal-title{
+  margin: 3% 0 3% 0;
+  color: #fff;
 }
 .wrapper nav {
   position: relative;
