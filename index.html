@@ -1,15 +1,76 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Hola Mundo</h1>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search" />
+        <input type="checkbox" id="show-menu" />
+        <label for="show-menu" class="menu-icon"
+          ><i class="fas fa-bars"></i
+        ></label>
+        <div class="content">
+          <div class="logo"><a href="#">API🎇🎇🎇</a></div>
+          <ul class="links">
+            <li><a href="#">Peliculas</a></li>
+            <li><a href="#">Acerca</a></li>
+            <li>
+              <a href="#" class="desktop-link">Caracteristicas</a>
+              <input type="checkbox" id="show-features" />
+              <label for="show-features">Features</label>
+              <ul>
+                <li><a href="#"> Menu 1</a></li>
+                <li><a href="#"> Menu 2</a></li>
+                <li><a href="#"> Menu 3</a></li>
+                <li><a href="#"> Menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-link">Servicios</a>
+              <input type="checkbox" id="show-services" />
+              <label for="show-services">Servicios</label>
+              <ul>
+                <li><a href="#"> Menu 1</a></li>
+                <li><a href="#"> Menu 2</a></li>
+                <li><a href="#"> Menu 3</a></li>
+                <li>
+                  <a href="#" class="desktop-link">Mas cosas</a>
+                  <input type="checkbox" id="show-items" />
+                  <label for="show-items">Mas cosas</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <label for="show-search" class="search-icon"
+          ><i class="fas fa-search"></i
+        ></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Inserte Su Busqueda..." required />
+          <button type="submit" class="go-icon">
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </form>
+      </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
