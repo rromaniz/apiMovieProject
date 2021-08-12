@@ -27,7 +27,7 @@ const createCards =(pelicula,deck_num)=>{
     titleCard.innerHTML =`${pelicula.title}`;
     let bodyText = document.createElement('p');
     bodyText.className="vote";
-    bodyText.innerHTML=`&#11088; ${pelicula.vote_average}| ${pelicula.release_date}`;
+    bodyText.innerHTML=`&#11088; ${pelicula.vote_average} | ${pelicula.release_date}`;
 
     bodyCard.appendChild(titleCard);
     bodyCard.appendChild(bodyText);
