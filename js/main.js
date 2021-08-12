@@ -46,7 +46,7 @@ const peliculas_Populares =()=>{
         console.log(response.data.results);
         let count=0;
         let deck_number =0;
-        response.data.results.forEach((pelicula,index) => {
+        response.data.results.forEach((pelicula) => {
             createCards(pelicula,deck_number);
             count++;
             if(count%5 == 0){
