@@ -1,9 +1,7 @@
 # Web MovieDB API
-Web Peliculas usando la API de MovieDB
+Web Películas que consume la API de MovieDB utilizando Javascript y la librería Axios
 
 ## Comenzando 🚀
-
-
 
 ### Pre-requisitos 📋
 1.Una api-key para usar la api de  [MovieDb](https://www.themoviedb.org/?language=es) es gratuita solo necesitas registrarte
