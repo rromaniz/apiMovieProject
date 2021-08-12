@@ -17,16 +17,23 @@
 body{
   background-color: #1A212C;
 }
-
+.card-deck{
+  margin-top: 2%;
+}
+.card{
+  padding: 2px;
+}
 .body-card>.title{
+  padding: 5px;
   font-weight: 600;
+  font-size:0.9em;
 }
 .body-card>.vote{
   font-weight: 500;
   font-size: 0.8em;
 }
 .body-card{
-  line-height: 40%;
+  line-height: 80%;
 }
 .principal-title{
   margin: 3% 0 3% 0;
