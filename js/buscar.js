@@ -1,4 +1,3 @@
-
 const url_base ='https://api.themoviedb.org/3/';
 const language ='es-ES';
 const api_key ='a7223a9370b830ebb4d41859e186a0e0';
@@ -37,11 +36,21 @@ const createCards =(pelicula,deck_num)=>{
 
 }
 
-////Función que hace fetch de las peliculas populares
-const peliculas_Populares =()=>{
+
+///Función que realiza el proceso de busqueda 
+///Recibe el parametro query que es la palabra que va a buscar y devuelve las peliculas que contengan esa palabra
+const busqueda_peliculas =(query)=>{
+
+    while(container_cards.firstChild){
+        container_cards.removeChild(container_cards.firstChild);
+    }
+    let emptyDeck = document.createElement('div');
+    emptyDeck.className="card-deck";
+    emptyDeck.id='deck-0';
+    container_cards.appendChild(emptyDeck);
     axios({
         method:'GET',
-        url:`${url_base}movie/popular?api_key=${api_key}&language=es-ES`
+        url:`${url_base}search/movie?api_key=${api_key}&language=es-ES&query=${query}`
     }).then(response=>{
         console.log(response.data.results);
         let count=0;
@@ -57,21 +66,6 @@ const peliculas_Populares =()=>{
             container_cards.appendChild(new_deck);
             }                  
         });
-    }).catch(error=>console.log(error))
-}
-
-///Función que recibe detalles de una película en especifico recibiendo el ID
-const detalles_pelicula=(id)=>{
-    axios({
-     method:'GET',
-     url:`${url_base}movie/${id}?api_key=${api_key}&language=es-ES`
-    }).then(response=>{
-        console.log(response.data);
     }).catch(error=>console.log(error));
+
 }
-
-
-
-peliculas_Populares();
-busqueda_peliculas('Suicide Squad');
-detalles_pelicula('436969');
