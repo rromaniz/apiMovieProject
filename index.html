@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,23 +13,38 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <nav>
-      <input type="checkbox" id="show-search" />
-      <input type="checkbox" id="show-menu" />
-      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-      <div class="content">
-        <div class="logo"><a href="#">API🎇🎇🎇</a></div>
-        <ul class="links">
-          <li><a href="index.html">Peliculas populares</a></li>
-          <li><a href="cartelera.html">En cartelera</a></li>
-          <li><a href="tv.html">Tv popular</a></li>
-          <li><a href="buscar.html">Buscar</a></li>
-          
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">API MovieDB</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="peliculas_Fetch('movie/popular');">Popular <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="peliculas_Fetch('movie/now_playing');" href="#">Now playing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="peliculas_Fetch('tv/popular');" href="#">Tv shows</a>
+          </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="busqueda_peliculas(document.getElementById('search').value)">Search</button>
+        </form>
       </div>
-    </nav>
-  </div>
+    </div>
+
+  </nav>
+
+
+
   <div class="container" id="principal">
     <h4 class="principal-title">Películas Populares</h4>
     <div class="card-deck" id="deck-0">
